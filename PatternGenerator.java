@@ -7,10 +7,14 @@ public class PatternGenerator
         PatternGenerator.stars(7);
     }
     public static void stars(int rows){
-        int i = 1;
-        while (i <= rows * 2 - 1) {
-            System.out.println("*" * i);
-            i += 2;
+        int i = 0;
+        while (i < rows) {
+            int j = 1;
+            while (j <= i * 2 - 1) {
+                System.out.print("*");
+            }
+            System.out.println();
+            i++;
         }
     }
 
