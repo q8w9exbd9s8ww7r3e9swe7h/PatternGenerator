@@ -48,7 +48,7 @@ public class PatternGenerator
             i++;
         }
     }
-    //  Pre-condition: parameter start must be an int that is the number you start at
+    //  Pre-condition: parameter start must be an int that is the number you start at (if it is odd)
     //  Post-condition: this method will print an odd number pattern where the number is printed its amount of times, numbers are in descending order
     public static void odds(int start){
         for (int i = start; i > 0; i--) {
@@ -81,7 +81,7 @@ public class PatternGenerator
         }
     }
     //  Pre-condition: parameter rows must be an int that is the amount of rows
-    //  Post-condition: this method will print a upside down pyramid using numbers, number are in ascending order
+    //  Post-condition: this method will print an upside down pyramid using numbers, numbers are in ascending order
     public static void pyramid(int rows){
         int c = 0;
         for (int i = rows; i > 0; i--) {
