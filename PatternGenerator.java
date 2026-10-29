@@ -7,6 +7,7 @@ public class PatternGenerator
 {
     public static void main(String[] args)
     {
+        System.out.println();
         PatternGenerator.stars(7);
         System.out.println();
         PatternGenerator.triangle(9);
@@ -22,10 +23,10 @@ public class PatternGenerator
     //  Pre-condition: parameter rows must be an int that is the amount of rows
     //  Post-condition: this method will print a star pattern that is a right triangle in shape
     public static void stars(int rows){
-        int i = 0;
-        while (i < rows) {
+        int i = 1;
+        while (i <= rows) {
             int j = 1;
-            while (j <= i * 2 - 1) {
+            while (j < i * 2) {
                 System.out.print("*");
                 j++;
             }
@@ -52,7 +53,7 @@ public class PatternGenerator
     public static void odds(int start){
         for (int i = start; i > 0; i--) {
             if (i % 2 == 1) {
-                for (int j = 1; j <= i; j++) {
+                for (int j = 0; j < i; j++) {
                     System.out.print(i);
                 }
                 System.out.println();
@@ -87,7 +88,7 @@ public class PatternGenerator
             for (int j = 0; j < c; j++) {
                 System.out.print(' ');
             }
-            for (int k = 1; k <= i * 2 - 1; k++) {
+            for (int k = 1; k < i * 2; k++) {
                 System.out.print(c + 1);
             }
             System.out.println();
