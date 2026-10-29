@@ -7,11 +7,17 @@ public class PatternGenerator
 {
     public static void main(String[] args)
     {
-        //PatternGenerator.stars(7);
-        //PatternGenerator.triangle(7);
-        //PatternGenerator.odds(7);
-        PatternGenerator.eo(7);
-        //PatternGenerator.eo(8);
+        PatternGenerator.stars(7);
+        System.out.println();
+        PatternGenerator.triangle(9);
+        System.out.println();
+        PatternGenerator.odds(9);
+        System.out.println();
+        PatternGenerator.eo(6);
+        System.out.println();
+        PatternGenerator.eo(5);
+        System.out.println();
+        PatternGenerator.pyramid(5);
     }
     public static void stars(int rows){
         int i = 0;
@@ -49,20 +55,34 @@ public class PatternGenerator
         }
     }
     public static void eo(int maxE) {
-        char[] EArr = new char[2];
-        if ((maxE & 1) == 1) {
-            EArr[0] = 'E';
-            EArr[1] = 'O';
+        String eo = "OE";
+        if (maxE % 2 == 0) {
+            eo = "EO";
         }
-        else {
-            EArr[0] = 'O';
-            EArr[1] = 'E';
-        }
-        for (int i = maxE; i < maxE; i--) {
+        for (int i = 0; i <= maxE; i++) {
             for (int j = 1; j <= i; j++) {
-                System.out.print(EArr[i % 2]);
+                System.out.print(eo.charAt(i % 2));
             }
             System.out.println();
+        }
+        for (int i = maxE - 1; i > 0; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(eo.charAt(i % 2));
+            }
+            System.out.println();
+        }
+    }
+    public static void pyramid(int rows){
+        int c = 0;
+        for (int i = rows; i > 0; i--) {
+            for (int j = 0; j < c; j++) {
+                System.out.print(' ');
+            }
+            for (int k = 1; k <= i * 2 - 1; k++) {
+                System.out.print(c + 1);
+            }
+            System.out.println();
+            c++;
         }
     }
 }
