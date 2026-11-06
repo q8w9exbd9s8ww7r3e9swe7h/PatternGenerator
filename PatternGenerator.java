@@ -60,8 +60,8 @@ public class PatternGenerator
             }
         }
     }
-    //  Pre-condition: parameter rows must be an int that is the amount of rows
-    //  Post-condition: this method will print an alternating pattern of E's and O's where the biggest row is E
+    //  Pre-condition: parameter maxE must be an int that is the length of the largest row
+    //  Post-condition: this method will print an alternating pattern of E's and O's where the largest row will be E's
     public static void eo(int maxE) {
         String eo = "OE";
         if (maxE % 2 == 0) {
